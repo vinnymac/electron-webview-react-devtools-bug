@@ -1,3 +1,4 @@
 var webFrame = require('electron').webFrame;
 
-webFrame.registerURLSchemeAsBypassingCSP('chrome-extension://');
+// webFrame.registerURLSchemeAsSecure('chrome-extension');
+webFrame.registerURLSchemeAsPrivileged('chrome-extension', { secure: true });
